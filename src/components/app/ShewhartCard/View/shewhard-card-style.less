@@ -1,0 +1,134 @@
+@import url(../../../../style-ui-cit/variables.less);
+
+.@{app-class-name}{
+    &-card-view{
+        padding-top: 24px;
+        .card-header{
+            font-size: 18px;
+            .card-label{
+                font-weight: bold;
+            }
+            .card-parameters{
+                display: flex;
+                justify-content: end;
+                font-size: 18px;
+                color: @color-page-sublabel;
+                .parameter{
+                    display: flex;
+                    align-items: center;
+                    &-icon{
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 5px
+                    }
+                    .stable{
+                        color: #00873c;
+                    }
+                    .nonstable{
+                        color: #DE0000;
+                    }
+                }
+            }
+        }
+        .more-detail{
+            font-size: 16px;
+            a{
+                margin: 0;
+            }
+        }
+        .card-body{
+            padding: 0px;
+        }
+        .body-action{
+            display: flex;
+            justify-content: space-between;
+            .action{
+                display: flex;
+                align-items: center;
+            }
+            a{
+                margin: 5px 25px 0 0px
+            }
+            a::before{
+                position: relative;
+                float: left;
+                margin-right: 10px;
+            }
+            .action-href{
+                display: flex;
+            }
+        }
+        .highcharts{
+            margin-bottom: 24px;
+        }
+        .other{
+            padding-top: 32px;
+            .page-label{
+                margin-bottom: 8px;
+            }
+        }
+    }
+    .dialog{
+        &-special-reason{
+            .selected-points-list{
+                height: 550px;
+            }
+        }
+    }
+
+    .shewhart-sidebar{
+        .button{
+            rotate: 270deg; 
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            color: @color-action;
+            cursor: pointer;
+        }
+        .side{
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+        }
+        .content{
+            height: 100%; 
+        }
+        &-open{
+            display: flex;
+            .side-left{
+                width: 70%;
+            }
+            .side-right{
+                &:extend(.spc .shewhart-sidebar .side);
+                width: 30%;
+                .button{
+                    &:extend(.spc .shewhart-sidebar .button);
+                    width: 10%;                    
+                }
+                .content{
+                    &:extend(.spc .shewhart-sidebar .content);
+                    width: 90%; 
+                }
+            }
+        }
+        &-close{
+            display: flex;
+            .side-left{
+                width:97%;
+            }
+            .side-right{
+                &:extend(.spc .shewhart-sidebar .side);
+                width: 3%;
+                .button{
+                    &:extend(.spc .shewhart-sidebar .button);
+                    width: 100%;
+                }
+                .content{
+                    &:extend(.spc .shewhart-sidebar .content);
+                    width: 0%;
+                    display: none;
+                }
+            }
+        }
+    }
+}

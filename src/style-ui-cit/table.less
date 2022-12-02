@@ -1,0 +1,146 @@
+@import url(./variables.less);
+
+.@{app-class-name} {
+
+    // Header content
+    &-table-header {
+        display: flex;
+        .page {
+
+            &-label {
+                font-weight: 900;
+                font-size: 24px;
+                color: @color-page-label;
+                padding-bottom: 14px;
+            }
+
+            &-sublabel {
+                font-weight: 900;
+                font-size: 18px;
+                color: @color-page-sublabel;
+            }
+
+        }
+
+        .searchmain-input {
+            width: 640px;
+            height: 40px;
+        }
+    }
+
+    // Body content
+    &-table-body {
+        font-size: 14px;
+
+        &.p-datatable {
+            .p-datatable-thead {
+                tr {
+                    border-radius: 5px;
+
+                    th {
+                        border: none;
+                        background: @color-table-head;
+                        color: @color-table-head-font;
+
+                        &:first-child {
+                            border-radius: 5px 0 0 5px;
+                        }
+
+                        &:last-child {
+                            border-radius: 0 5px 5px 0;
+                        }
+                    }
+                }
+            }
+
+            .p-datatable-tbody {
+                tr {
+                    td {
+                        border: none;
+                    }
+                }
+
+                tr:nth-child(2n) {
+                    background-color: @color-row;
+                }
+            }
+        }
+
+        //Класс для колонок
+        .column {
+            &-color {
+                &-black {
+                    color: @color-page-label;
+                }
+            }
+        }
+
+        .changeColumn{
+            width: 100%;
+        }
+
+        .button-filter-none{
+            .p-column-filter-clear-button{
+                display:none;
+            }
+        }
+
+        // Кнопки действия над строкой
+        .actions {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            button {
+                color: @color-table-row-font;
+            }
+        }
+
+        // Стили для пагинатора
+        .p-paginator {
+            justify-content: left;
+            padding-left: 0;
+
+            .p-paginator-first,
+            .p-paginator-last {
+                display: none;
+            }
+
+            .p-paginator-prev,
+            .p-paginator-pages {
+                margin-right: 10px;
+            }
+
+            .p-disabled {
+                opacity: 1;
+            }
+
+            .p-paginator-pages {
+                &>.p-paginator-page {
+                    border-radius: 20px;
+                    min-width: 0;
+                    height: 24px;
+                    width: 24px;
+                    font-size: 14px;
+                }
+            }
+
+            button {
+                border: 2px solid @color-action;
+                border-radius: 20px;
+                min-width: 0;
+                height: 24px;
+                width: 24px;
+
+                span {
+                    color: @color-action;
+                }
+            }
+        }
+    }
+
+    .p-datatable .p-sortable-column.p-highlight:hover {
+        color: @color-action;
+        background: @color-table-head;
+    }
+}

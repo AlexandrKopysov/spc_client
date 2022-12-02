@@ -1,0 +1,251 @@
+@import url(table.less);
+@import url(icons.less);
+@import url(variables.less);
+
+.@{app-class-name} {
+
+    HeaderMenu {
+        height: @height-header;
+    }
+
+    .content-table{
+        padding-top: 14px;
+    }
+
+    &>.overflow {
+        overflow: auto;
+    }
+
+    &>.progress-bar {
+        height: @height-progress-bar;
+    }
+
+    &>.header {
+        border-bottom: 1px solid #eaeaea;
+        margin-top: @header-margin;
+    }
+
+    a {
+        text-decoration: none;
+        background-image: linear-gradient(@color-action, @color-action);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 1px;
+        transition: background-size 0.3s;
+        color: @color-action;
+        cursor: pointer;
+
+        &:hover {
+            background-size: 100% 1px;
+        }
+    }
+
+    .logo {
+        font-weight: 900;
+        font-size: 18px;
+        letter-spacing: 0.1rem;
+        color: @color-action;
+    }
+
+    .p-button:enabled:hover {
+        border-color: none;
+    }
+
+    .button {
+        height: 40px;
+        font-size: 14px;
+
+        &-add {
+            background-color: @color-action;
+            border-color: @color-action;
+
+            &:hover {
+                background-color: @color-action-active;
+                border-color: @color-action-active;
+            }
+        }
+
+        &-warn {
+            background-color: @color-warn;
+            border-color: @color-warn;
+
+            &:hover {
+                background-color: @color-warn-active;
+                border-color: @color-warn-active;
+            }
+        }
+
+        &-error {
+            background-color: @color-error;
+            border-color: @color-error;
+
+            &:hover {
+                background-color: @color-error-active;
+                border-color: @color-error-active;
+            }
+        }
+    }
+
+    .blur {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(8px);
+        height: 100vh;
+        width: 50%;
+    }
+
+    // Обнуление PrimeVue стилей
+    .p-inputnumber,
+    .p-inputtext {
+        &.w-full {
+            input {
+                width: 100%;
+            }
+        }
+    }
+
+    .p-component,
+    .p-menu {
+        font-size: @font-size-global;
+    }
+
+    .p-column-filter-menu-button {
+        display: none;
+    }
+
+    .p-inputtext:enabled:focus {
+        outline: 0 none;
+        outline-offset: 0;
+        box-shadow: none;
+        border-color: @color-action;
+    }
+
+    .p-button:focus{
+        outline: 0 none;
+        outline-offset: 0;
+        box-shadow: none;
+    }
+
+
+
+    /*!!!Вынести в отдельный класс */
+    .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
+        background: #ffffff;
+        border-color: none;
+        color: @color-action;
+    }
+
+    .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link:not(.p-disabled):focus {
+        outline: 0 none;
+        outline-offset: 0;
+        box-shadow: none;
+    }
+    .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+        background: #ffffff;
+        border-color: none;
+        color: @color-action;
+    }
+
+    .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+        outline: 0 none;
+        outline-offset: 0;
+        box-shadow: none;
+    }
+
+    .p-tabview .p-tabview-panels {
+        padding: 0px;
+    }
+
+    .p-component {
+        font-family: 'Roboto';
+        font-size: @font-size-global;
+        font-weight: normal;
+    }
+
+    .highcharts-credits{
+        display: none;
+    }
+
+    .p-dropdown .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link:not(.p-disabled):focus {
+        outline: 0 none;
+        outline-offset: 0;
+        box-shadow: none;
+    }
+
+    .p-dropdown:not(.p-disabled).p-focus {
+        outline: 0 none;
+        outline-offset: 0;
+        box-shadow: none;
+    }
+
+    .p-dialog-header .p-dialog-header-icons {
+        display: none;
+    }
+
+    .p-dialog-footer {
+        display: flex;
+        justify-content: center;
+
+        button {
+            &:first-child {
+                color: @color-action;
+
+                &:hover {
+                    color: @color-action-active;
+                }
+            }
+
+            &:last-child {
+                background-color: @color-action;
+                border-color: none;
+
+                &:hover {
+                    background-color: @color-action-active;
+                }
+            }
+
+            &:not(.p-disabled):focus {
+                outline: 0 none;
+                outline-offset: 0;
+                box-shadow: none;
+            }
+        }
+    }
+
+    &.p-sidebar {
+        a {
+            color: @color-page-label;
+            font-size: 18px;
+            background-image: linear-gradient(@color-page-label, @color-page-label);
+        }
+
+        .p-sidebar-header {
+            height: 70px;
+        }
+
+        .p-sidebar-close {
+            display: none;
+        }
+
+        .menu-link {
+            padding: 5px 0 5px 0;
+        }
+    }
+
+    //============================
+    &.flex-column {
+        height: 100%;
+
+        .flex-grow-1 {
+            overflow: auto;
+        }
+    }
+}
+
+// Выпадающее меню для пользователя
+#user-menu {
+
+    .p-submenu-header,
+    .p-menuitem {
+        font-size: @font-size-global;
+    }
+}

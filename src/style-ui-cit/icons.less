@@ -1,0 +1,39 @@
+@import url(./variables.less);
+.@{app-class-name}&-i{
+    &-pencil{
+        &::before{
+        content: url("../../public/assets/icons/pi-pencil-edit.png");
+        }
+        &:hover::before{
+            content: url('../../public/assets/icons/pi-pencil-edit-active.png');
+        }
+    }
+    &-info{
+        &::before{
+            content: url('../../public/assets/icons/spc-info.png');
+        }
+    }
+    &-plus{
+        &::before{
+            content: url('../../public/assets/icons/spc-plus.png');
+        }
+    }
+    &-history{
+        &::before{
+            content: url('../../public/assets/icons/spc-history.png');
+        }
+    }
+    &-warn{
+        &::before{
+            content: url('../../public/assets/icons/spc-warn.png')
+        }
+    }
+    &-process{
+        &-stable{
+            content: url('../../public/assets/icons/process-stable.svg');
+        }
+        &-nonstable{
+            content: url('../../public/assets/icons/process-dont-stable.svg')
+        }
+    }
+}
